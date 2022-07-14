@@ -1,25 +1,15 @@
-import countries from '../countries.json'
-import { Link } from 'react-router-dom'
 
-function CountriesList() {
-    return (
-        <div>
-            
-            {countries
-                .map((country) => (
-                    <div>
-                        <Link to={`/`}>
-                            <div>
-                                
-                                <div>
-                                    <h5>{country.alpha3Code}</h5>
-                                </div>
-                            </div>
-                        </Link>
-                    </div>
-                ))}
+import { Link } from 'react-router-dom';
 
-        </div>
-    )
+function CountriesList(props) {
+  return (
+    <div>
+      {props.countries.map((country) => (
+        <Link to={`/${country.alpha3Code}`}>
+          <h5>{country.name.common}</h5>
+        </Link>
+      ))}
+    </div>
+  );
 }
-export default CountriesList
+export default CountriesList;

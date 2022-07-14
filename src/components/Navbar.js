@@ -1,4 +1,4 @@
-import { Link, NavLink } from "react-router-dom";
+
 
 function Navbar() {
   return (
@@ -8,11 +8,11 @@ function Navbar() {
         {/* <Link to="/about"> About </Link> */}
         {/* <Link to="/projects"> Projects </Link> */}
         
-        <NavLink to="/" className={({ isActive }) => isActive ? "selected" : ""}>
-            LAB-WikiCountries
-        </NavLink>
-        
-      
+        <nav class="navbar navbar-dark bg-primary mb-3">
+        <div class="container">
+          <a class="navbar-brand" href="/">WikiCountries</a>
+        </div>
+      </nav>
       
     </nav>
   );
